@@ -1,7 +1,9 @@
-import { useState } from "react";
+type TProps = {
+  count: number;
+  setCount: React.Dispatch<React.SetStateAction<number>>;
+};
 
-const CounterWithFuncCompnent = () => {
-  const [count, setCount] = useState(0);
+const CounterWithFuncCompnent = ({ count, setCount }: TProps) => {
   return <button onClick={() => setCount((prev) => prev + 1)}>{count}</button>;
 };
 
